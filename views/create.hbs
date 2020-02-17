@@ -1,0 +1,36 @@
+
+{{#if formreg}}
+      <div class="col s6">
+        <form class="regform" action="/create" method="post">
+          <h1 class="center">Регистрация</h1>
+          <div class="input-field">
+          <lable>Имя</lable>
+          <input type="text" name="name" required placeholder="Ваше имя">
+          <lable>E-mail</lable>
+          <input type="text" name="email" required placeholder="some@exemple.com">
+          <lable>Пароль</lable>
+          <input type="password" name="pass" minlength="6" placeholder="Не меньше 6 символов" required >
+          <lable>Повторите пароль</lable>
+          <input type="password" minlength="6" name="repass" required >
+          {{#if textreg}}<lable class="red-text">{{textreg}}</lable>{{/if}}
+          </div>
+          <button type="submit" class="btn">Регистрация</button>
+        </form>
+      </div>
+{{/if}}
+
+<div class="col s6">
+<form class="" action="/getuser" method="post">
+  <h1 class="center">Вход</h1>
+  <div class="input-field">
+    <lable>E-mail</lable>
+    <input type="text" name="email" required placeholder="some@exemple.com">
+  </div>
+  <div class="input-field">
+    <lable>Пароль</lable>
+    <input type="password" name="pass" minlength="6" required >
+    {{#if textlog}}<lable class="red-text">{{textlog}}</lable>{{/if}}
+  </div>
+  <button type="submit" class="btn">Вход</button>
+</form>
+  </div>
